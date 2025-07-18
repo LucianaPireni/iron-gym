@@ -1,0 +1,16 @@
+# Ignorar node_modules
+node_modules/
+
+# Ignorar archivos de entorno
+.env
+
+# Ignorar archivos temporales de macOS
+.DS_Store
+
+# Ignorar logs
+*.log
+
+# Ignorar compilaciones
+/dist
+/build
+
