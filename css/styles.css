@@ -1,0 +1,183 @@
+.row>* {
+    padding: 0;
+}
+body {
+  font-family: "roboto", sans-serif;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  max-width: 100%;
+  overflow-x: hidden;
+}
+.principal {
+    background-color: #363635;
+}
+.pie {
+    background-color: #8C9A9E;
+}
+/*Header*/
+.encabezado {
+  background-color: #363635;
+}
+.navbar-brand {
+    color:#98CE00;
+    font-family: "Trade Winds", system-ui;
+    font-size: 40px;
+}
+.encabezado .navbar-nav .nav-link.active, .encabezado .navbar-nav .nav-link.show {
+  color: #98CE00;
+}
+.encabezado .luciana-nav-item {
+  text-align: center;
+}
+.encabezado .luciana-nav-item a {
+  font-size: 1.2rem;
+}
+.encabezado .nav-link {
+  color: #98CE00;
+}
+@media (min-width: 992px) {
+  .encabezado .navbar-expand-lg .navbar-nav {
+    width: 100%;
+    justify-content: space-around;
+  }
+}
+.banner .banner-img img {
+  top: auto;
+  left: auto;
+  z-index: 0;
+  pointer-events: none;
+  height: 150px;
+  width: 100%;
+  object-fit: fill;
+  object-position: center;
+}
+/*MAIN*/
+.titulo-principal {
+    color:#98CE00
+}
+.titulo-bienvenida {
+    color: #ffffff;
+    font-size: 1.5rem;
+}
+.parrafo-bienvenida {
+    color: #ffffff;
+    font-size: 1.2rem;
+}
+/*Productos*/
+.card {
+    width: 50%;
+    height: 150px;
+    padding: 10px;
+    background-color: #8C9A9E;
+    text-align: center;
+}
+.nombre-producto {
+    color:#363635;
+}
+.card .btn {
+    background-color: #98CE00;
+}
+
+.boton-carrito .btn {
+    background-color: #98CE00;
+}
+.precio-producto {
+    color: #98CE00;
+}
+.enlace-carrito {
+    text-decoration: none;
+    color: white;
+}
+/*FOOTER*/
+.pie .redes-enlaces {
+  width: 70%;
+}
+.pie .contacto-telefono p {
+  color:#98CE00;
+  font-size: 1.4em;
+  margin-bottom: 0px;
+}
+.pie .pie-final p {
+  font-size: 0.8em;
+  margin-bottom: 0px;
+}
+/*CARRITO*/
+.titulo-resumen {
+    color:#98CE00
+}
+.principal-carrito {
+    background-color: #363635;
+    color:#8C9A9E;
+}
+.clase-comprada {
+    text-align: center;
+}
+.texto-resumen{
+    color: #ffffff;
+}
+.modal-title {
+    color:#98CE00;
+    font-family: "Trade Winds", system-ui;
+}
+.enlace-volver {
+    text-decoration: none;
+    color: #ffffff;
+}
+/*Animaciones*/
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+.texto-bienvenida {
+    animation: fadeIn 2s ease forwards;
+}
+.titulo-principal{
+  animation: fadeInUp 1s ease forwards;  
+}
+.seccion-productos {
+  animation: fadeInUp 1s ease forwards;
+}
+.resumen-carrito {
+    animation: fadeInDown 1s ease forwards;
+} 
+.total-a-pagar {
+    animation: fadeInDown 1s ease forwards;
+} 
+.redes-enlaces a:hover {
+  animation: pulse 0.6s ease;
+}
+
