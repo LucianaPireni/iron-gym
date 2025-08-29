@@ -10,8 +10,10 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet"> 
-    <!--BS-->
+    <!--Bootstrap-->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
+    <!--Toastify-->
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
     <!--CSS-->
     <link rel="stylesheet" href="../css/styles.css">
     <!--JS-->
@@ -21,6 +23,7 @@
 <body>
     <div class="container-fluid">
         <header class="encabezado row">
+            <!--Navbar-->
             <nav class="navbar navbar-expand-lg luciana-bg-body" role="navigation" aria-label="Navegación Principal">
                 <div class="container-fluid">
                     <a class="navbar-brand" href="../index.html">IRON GYM</a>
@@ -46,42 +49,28 @@
                 </div>
             </div>
         </header>
+        <!--Main-->
         <main class="principal-carrito row">
-            <h2 class="d-flex justify-content-center m-3 titulo-resumen">RESUMEN DE COMPRA</h2>
+            <h2 class="d-flex justify-content-center m-3 titulo-resumen">CARRITO DE COMPRAS</h2>
             <section class="d-flex flex-column align-items-center resumen-carrito" id="seccion-carrito"></section>
-            <section class="d-flex justify-content-center total-a-pagar" id="seccion-total"></section>
+            <section class="d-flex justify-content-center m-3 total-a-pagar" id="seccion-total"></section>
+       
+        
             <div class="d-flex justify-content-center m-3 boton-carrito">
-                <button type="button" class="btn btn-success btn-lg" data-bs-toggle="modal" data-bs-target="#exampleModal">PAGAR</button>
-                <!-- Modal -->
-                <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-                    <div class="modal-dialog">
-                        <div class="modal-content">
-                            <div class="modal-header">
-                                <h1 class="modal-title fs-5" id="exampleModalLabel">IRON GYM</h1>
-                                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                            </div>
-                            <div class="modal-body">
-                                <p>Nuestro alias: irongym<br>Mandanos el comprobante a pagos@iron-gym.com.ar<br><br>DIRECCIÓN: Pedro Goyena 1356 - Caballito<br><br><strong>TE ESPERAMOS!</strong></p>
-                            </div>
-                            <div class="modal-footer">
-                                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <button type="button" class="btn btn-success btn-lg" id="vaciar-carrito"><a class="enlace-carrito" href="../index.html">Vaciar el carrito</a></button>
+                <button type="button" id="btn-pagar" class="btn btn-success btn-lg m-3">Comprar</button>
+                <button type="button" class="btn btn-success btn-lg m-3" id="vaciar-carrito"><a class="enlace-carrito" href="../index.html">Vaciar el carrito</a></button>
             </div>
             <div class="d-flex justify-content-center ms-3 volver">
                 <p><a class="enlace-volver" href="../index.html">VOLVER AL INICIO</a></p>
             </div>
         </main>
-        <!--FOOTER-->
+        <!--Footer-->
         <footer class="d-flex flex-xl-wrap flex-md-wrap flex-wrap  pie row" aria-label="pie de pagina">
             <!--Logo con enlace a la Home-->
             <section class="d-flex justify-content-lg-center justify-content-md-center justify-content-center align-items-center col-md-4 col-12 logo-final">
                 <a class="navbar-brand" href="../index.html">IRON GYM</a>
             </section>
-            <!--Section Enlaces a Redes--> 
+            <!--Section Redes--> 
             <section class="d-flex flex-column align-items-center col-lg-4 col-md-4 col-12 mt-3 mb-3 redes">
                 <div class="redes-titulo">
                     <h6>NUESTRAS REDES</h6>
@@ -93,13 +82,17 @@
                 </div>
             </section>
             <!--Section Contacto-->
-            <section class="d-flex flex-column align-items-center col-md-4 col-12 mt-3 mb-3 delivery" aria-label="datos de contacto">
+            <section class="d-flex flex-column align-items-center col-md-4 col-12 mt-3 contacto" aria-label="datos de contacto">
                 <div class="contacto-titulo">
                     <h6>CONTACTANOS</h6>
                 </div>
-                <div class="d-flex align-items-center contacto-telefono" aria-labelledby="telefono-contacto">
+                <div class="d-flex flex-row contacto-telefono">
                     <img src="../assets/logo-whatsapp-negro.png" alt="logo de WhatsApp">
-                    <p class="ms-2" id="telefono-delivery">11 3444 3434</p>       
+                    <p class="ms-2" id="telefono-contacto">11 3444 3434</p>  
+                </div>
+                <div class="d-flex flex-column align-items-center ms-5 mt-2 direccion">
+                    <p>Av. Pedro Goyena 1356 - Caballito</p> 
+                    <p>Horario: Lunes a Sábado de 7:00 a 22:00 hs</p>    
                 </div> 
             </section>
             <!--Section pie copyright-->
@@ -108,8 +101,12 @@
             </section>
         </footer>       
     </div>
-    <!--Scripts de BS--> 
+    <!--Bootstrap--> 
     <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.min.js" integrity="sha384-7qAoOXltbVP82dhxHAUje59V5r2YsVfBafyUDxEdApLPmcdhBPg1DKg1ERo0BZlK" crossorigin="anonymous"></script>
+    <!--SweetAlert-->
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!--Toastify-->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
 </body>
 </html>

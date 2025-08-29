@@ -1,0 +1,27 @@
+[
+  {
+    "id": 1,
+    "nombre": "Crossfit",
+    "precio": 7000
+  },
+   {
+    "id": 2,
+    "nombre": "Funcional",
+    "precio": 6000
+  },
+   {
+    "id": 3,
+    "nombre": "Spinning",
+    "precio": 5000
+  },
+   {
+    "id": 4,
+    "nombre": "Zumba",
+    "precio": 5000
+  },
+   {
+    "id": 5,
+    "nombre": "Localizada",
+    "precio": 4000
+  }
+]

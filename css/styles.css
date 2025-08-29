@@ -4,6 +4,7 @@
 body {
   font-family: "roboto", sans-serif;
   height: 100%;
+  width: 100%;
   margin: 0;
   padding: 0;
   box-sizing: border-box;
@@ -12,6 +13,9 @@ body {
 }
 .principal {
     background-color: #363635;
+}
+.principal-carrito {
+  min-height: 60vh;
 }
 .pie {
     background-color: #8C9A9E;
@@ -67,21 +71,27 @@ body {
 }
 /*Productos*/
 .card {
-    width: 50%;
-    height: 150px;
+    width: 250px;
+    height: 250px;
     padding: 10px;
     background-color: #8C9A9E;
     text-align: center;
 }
+.counter {
+  background-color: #ffffff;
+}
 .nombre-producto {
     color:#363635;
 }
-.card .btn {
+.agregar {
     background-color: #98CE00;
 }
 
 .boton-carrito .btn {
     background-color: #98CE00;
+}
+.carrito-vacio {
+  color:#989fa1;
 }
 .precio-producto {
     color: #98CE00;
@@ -99,8 +109,12 @@ body {
   font-size: 1.4em;
   margin-bottom: 0px;
 }
+.pie .direccion p {
+  font-size: 1em;
+  margin-bottom: 0px;
+}
 .pie .pie-final p {
-  font-size: 0.8em;
+  font-size: 0.6em;
   margin-bottom: 0px;
 }
 /*CARRITO*/
@@ -111,11 +125,21 @@ body {
     background-color: #363635;
     color:#8C9A9E;
 }
-.clase-comprada {
+.carrito {
     text-align: center;
+    margin: 10px;
+}
+.principal-carrito span {
+  color:#ffffff;
 }
 .texto-resumen{
     color: #ffffff;
+}
+.minus-button {
+  background-color:#989fa1;
+}
+.plus-button {
+  background-color:#989fa1;
 }
 .modal-title {
     color:#98CE00;
@@ -124,6 +148,61 @@ body {
 .enlace-volver {
     text-decoration: none;
     color: #ffffff;
+}
+/*SweetAlert*/
+.swal2-html-container {
+  display: grid; 
+  gap: 10px; 
+  text-align: center;
+}
+.swal2-html-container div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.swal2-html-container div .radio-cards {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.swal2-html-container div .radio-cards .option-cards {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  gap: 10px;
+}
+.swal2-html-container div .radio-cards .option-cards label {
+  width: 100%;
+}
+.swal2-html-container div .card-info{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.swal2-html-container div .card-info div {
+  display: flex;
+  align-self: flex-start;
+  width: 40%;
+}
+.swal2-html-container div .card-info div input {
+  display: flex;
+  align-self: center;
+  width: 100%;
+}
+.swal2-html-container ul {
+  display: flex;
+  flex-direction: column;
+  text-align:left;
+}
+.total-resumen {
+  font-size: 1.5rem;
+}
+.logo {
+    color:#98CE00;
+    font-family: "Trade Winds", system-ui;
+    font-size: 40px;
 }
 /*Animaciones*/
 @keyframes fadeInUp {
@@ -180,4 +259,6 @@ body {
 .redes-enlaces a:hover {
   animation: pulse 0.6s ease;
 }
+
+
 
